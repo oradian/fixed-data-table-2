@@ -150,7 +150,7 @@ var FixedDataTableBufferedRows = (0, _createReactClass2.default)({
         isScrolling: props.isScrolling,
         index: rowIndex,
         width: props.width,
-        zIndex: 101 - rowIndex,
+        zIndex: Number.MAX_SAFE_INTEGER - rowIndex,
         height: currentRowHeight,
         scrollLeft: Math.round(props.scrollLeft),
         offsetTop: Math.round(rowOffsetTop),
