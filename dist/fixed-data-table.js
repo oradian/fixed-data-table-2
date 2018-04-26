@@ -6394,13 +6394,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var rowKey = props.rowKeyGetter ? props.rowKeyGetter(rowIndex) : i;
 
 	      var hasBottomBorder = rowIndex === props.rowsCount - 1 && props.showLastRowBorder;
-
+	      var maxSafeZIndex = 1000000;
 	      this._staticRowArray[i] = _React2.default.createElement(_FixedDataTableRow2.default, {
 	        key: rowKey,
 	        isScrolling: props.isScrolling,
 	        index: rowIndex,
 	        width: props.width,
-	        zIndex: Number.MAX_SAFE_INTEGER - rowIndex,
+	        zIndex: maxSafeZIndex - rowIndex,
 	        height: currentRowHeight,
 	        scrollLeft: Math.round(props.scrollLeft),
 	        offsetTop: Math.round(rowOffsetTop),
